@@ -6,6 +6,6 @@
  * Time: 12:22
  */
 
-require "smartphp/core/Smartphp.php";
+require "smartphp/core/Smartphp.class.php";
 
 Smartphp::run();

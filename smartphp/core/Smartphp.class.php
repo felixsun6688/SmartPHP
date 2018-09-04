@@ -44,10 +44,10 @@ class Smartphp{
         define("CURR_VIEW_PATH", VIEW_PATH . PLATFORM . DS);
 
         // Load core classes
-        require CORE_PATH . "Controller.php";
-        require CORE_PATH . "Loader.php";
-        require DB_PATH . "Mysql.php";
-        require CORE_PATH . "Model.php";
+        require CORE_PATH . "Controller.class.php";
+        require CORE_PATH . "Loader.class.php";
+        require DB_PATH . "Mysql.class.php";
+        require CORE_PATH . "Model.class.php";
 
         // Load configuration file
         $GLOBALS['config'] = include CONFIG_PATH . "config.php";
@@ -74,11 +74,11 @@ class Smartphp{
         // Here simply autoload app&rsquo;s controller and model classes
         if (substr($classname, -10) == "Controller") {
             // Controller
-            require_once CURR_CONTROLLER_PATH . "$classname.php";
+            require_once CURR_CONTROLLER_PATH . "$classname.class.php";
 
         } elseif (substr($classname, -5) == "Model") {
             // Model
-            require_once MODEL_PATH . "$classname.php";
+            require_once MODEL_PATH . "$classname.class.php";
 
         }
     }
